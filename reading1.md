@@ -10,6 +10,7 @@ Growth Mind Set - How can I keep a Growth Mind set
 3.
 
 Tools to use
+
 1.Friends
 2.Instructors
 TA's
