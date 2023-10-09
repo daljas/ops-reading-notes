@@ -13,7 +13,7 @@ Tools to use
 
 1.Friends
 2.Instructors
-TA's
-Slack
-Canvas
-Zoom
+3.TA's
+4.Slack
+5.Canvas
+6.Zoom
