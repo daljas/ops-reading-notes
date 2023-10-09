@@ -5,9 +5,9 @@
 ### Reading #1
 
 Growth Mind Set - How can I keep a Growth Mind set  
-1.
-2.
-3.
+1. Stay postive
+2. do not think of can not but i can mentality
+3.  Use resources to find the answer instead of struggling by yourself
 
 Tools to use
 
