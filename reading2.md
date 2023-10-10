@@ -17,9 +17,13 @@
 4.  Think about others with a background similar to yours. How would you explain to them the key parts of a computer, in a way they’d best connect with?
 
     Motherboard is what hold the computer together
+    
     CPU is the Brain of the computer
+    
     Ram is short term memory of a computer
+    
     Ports are the extention of the computer to help us give information to the computer
+    
     Storage drive is the permanent memory of the computer
 
 ### Things I want to know more about
