@@ -48,6 +48,7 @@
    ### Things I want to know more about
 
       Why do more people come to see open sources and versatility as a good option to sell products
+
       Why does FCC rule states 5GHz router can not be open sources compared to other
 
    #### Resources
