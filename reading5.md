@@ -22,7 +22,8 @@
 
  4.Explain what Linux is, using anything except English. 
 
-  A complext stuff of 1 and 0 we see on a screen
+
+Linux es un sistema operativo (SO) de código abierto. Un sistema operativo es el software que administra directamente el hardware y los recursos de un sistema, como la CPU, la memoria y el almacenamiento.
 
 ### Resourses
 
