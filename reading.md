@@ -14,7 +14,7 @@
 
  2. What are the commands to change directories, list the file’s contents and rename/move files?
 
-   You use MV and ls commands to move and rename and change directories.
+   You use MV and ls commands to move and rename and cd change directories.
 
  3.What are relative and absolute paths? What is special about starting with a ~ (tilde) or a ‘/’ character in the path?
 
