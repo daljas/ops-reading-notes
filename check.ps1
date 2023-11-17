@@ -15,21 +15,22 @@ $installPath = "$env:ProgramFiles\"
 # Define desktop shortcut path
 $desktopPath = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'))
 
-# Function to install application asynchronously
-function Install-ApplicationAsync {
+# Function to install application
+function Install-Application {
     param(
         [string]$url,
         [string]$installPath
     )
 
-    Start-Job -ScriptBlock {
-        param($url, $installPath)
+    # Download the installer
+    $installerPath = Join-Path $installPath (Split-Path $url -Leaf)
+    Invoke-WebRequest -Uri $url -OutFile $installerPath
 
-        $installerPath = Join-Path $installPath (Split-Path $url -Leaf)
-        Invoke-WebRequest -Uri $url -OutFile $installerPath
-        Start-Process -FilePath $installerPath -Wait
-        Remove-Item -Path $installerPath -Force
-    } -ArgumentList $url, $installPath
+    # Install the application
+    Start-Process -FilePath $installerPath -Wait
+
+    # Remove the installer (optional)
+    Remove-Item -Path $installerPath -Force
 }
 
 # Function to create desktop shortcut
@@ -42,14 +43,10 @@ function Create-DesktopShortcut {
     $WshShell.CreateShortcut("$desktopPath\$appName.lnk").TargetPath = "$installPath\$appName\$appName.exe"
 }
 
-# Install applications asynchronously in parallel
-$jobs = @()
+# Install applications synchronously
 foreach ($url in $urls.Values) {
-    $jobs += Install-ApplicationAsync -url $url -installPath $installPath
+    Install-Application -url $url -installPath $installPath
 }
-
-# Wait for all installations to complete
-$jobs | Wait-Job | Remove-Job
 
 # Create desktop shortcuts for specified applications
 foreach ($appName in 'Zoom', 'AnyDesk', 'SSHFS-Manager', 'GoogleChrome', 'LibreOffice') {
